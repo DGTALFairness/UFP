@@ -1,0 +1,65 @@
+RewriteEngine On
+RewriteBase /
+
+# ✅ Set default page to index.php
+DirectoryIndex index.php
+
+# ✅ Redirect clean URLs like /page to /page.php if it exists
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
+
+# ✅ Optional: Remove .php extension if someone types it manually
+RewriteCond %{THE_REQUEST} "^[^ ]* /([^/]+)\.php"
+RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
+
+# ✅ Apply same logic inside /template/ directory
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^template/([a-zA-Z0-9_-]+)/?$ template/$1.php [L]
+
+# ✅ Only redirect .php removal for GET requests (protects POSTs like login)
+RewriteCond %{THE_REQUEST} "^[A-Z]{3,9}\s/template/([^/]+)\.php" [NC]
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^template/([^/]+)\.php$ /template/$1 [R=301,L]
+
+# ✅ Disable Directory Browsing
+Options -Indexes
+
+# ✅ Block Access to Sensitive and Hidden Files
+<FilesMatch "^(\.|env|htaccess|git|svn|bash|composer|.*env).*">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ✅ Prevent PHP execution inside /assets
+<Directory "/assets">
+  <Files "*.php">
+    Order allow,deny
+    Deny from all
+  </Files>
+</Directory>
+
+# ✅ Protect .htaccess itself
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+# ✅ Limit HTTP methods
+<LimitExcept GET POST HEAD>
+  Deny from all
+</LimitExcept>
+
+# ✅ Security Headers
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options nosniff
+
+# ✅ Hide Server Signature
+ServerSignature Off
+
+# ✅ Block suspicious query strings
+RewriteCond %{QUERY_STRING} (\.\.\/|\.\.\\) [NC,OR]
+RewriteCond %{QUERY_STRING} (etc/passwd|boot\.ini|wp-config\.php|\.env) [NC,OR]
+RewriteCond %{QUERY_STRING} (select|union|insert|drop|script|<|%3C|%3E|>) [NC]
+RewriteRule ^.*$ - [F,L]

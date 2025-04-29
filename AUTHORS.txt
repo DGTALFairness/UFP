@@ -1,0 +1,13 @@
+Project: Universal Fairness Protocol (UFP)
+
+Primary Author: DgtalFairness  
+Website: https://universalfairnessprotocol.com  
+Docs & Licensing: https://universalfairnessprotocol.org  
+Email: info@universalfairnessprotocol.com  
+
+Public Repository Profiles:
+- GitHub: https://github.com/DGTALFairness
+- GitLab: https://gitlab.com/DGTALFairness
+- Bitbucket: https://bitbucket.org/dgtalfairness/
+- Codeberg: https://codeberg.org/DGTALFairness
+- SourceHut: https://sr.ht/~dgtalfairness/

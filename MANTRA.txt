@@ -1,0 +1,10 @@
+💡 UFP Mantra
+
+Live List = Final List → Final List = SHA-256 Hash → SHA-256 Hash = Segment → Segment = Public Formula → Public Formula = Winner
+
+This mantra defines the core sequence of fairness behind every round in the Universal Fairness Protocol (UFP). It is a transparent and verifiable chain of logic that ensures each winner is deterministically selected from publicly known data.
+
+—
+
+This file is a philosophical summary and does not contain legal licensing terms.
+See LICENSE.txt for full legal license (GPLv3 + Commercial).
