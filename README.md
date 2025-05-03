@@ -47,10 +47,12 @@ making every outcome **fully reproducible** and **publicly verifiable**.
 
 ## 📥 Installation Guide
 
-1. **Clone or download the repository**:
+> This project is mirrored across several platforms. The GitHub repository is the canonical source for all clone operations and version references.
+
+1. **Clone the repository (GitHub canonical source)**:
 
 ```bash
-git clone https://github.com/YourRepo/universal-fairness-protocol.git
+git clone https://github.com/DGTALFairness/UFP.git
 ```
 
 2. **Upload the source files to your server.**
@@ -100,7 +102,7 @@ Please refer to:
 - [README_LICENSING.md](README_LICENSING.md) — Human-readable explanation
 
 Commercial licenses are available at:  
-👉 [https://dgtalfairness.gumroad.com](https://dgtalfairness.gumroad.com)
+👉 [https://dgtalfairness.gumroad.com/l/UFP](https://dgtalfairness.gumroad.com/l/UFP)
 
 
 ---
@@ -112,12 +114,19 @@ Commercial licenses are available at:
   - [universalfairnessprotocol.com](https://universalfairnessprotocol.com)
   - [universalfairnessprotocol.org](https://universalfairnessprotocol.org)
 
-- Public repositories:
+- Author Profiles:
   - [GitHub](https://github.com/DGTALFairness)
   - [GitLab](https://gitlab.com/DGTALFairness)
   - [Bitbucket](https://bitbucket.org/dgtalfairness/)
   - [Codeberg](https://codeberg.org/DGTALFairness)
   - [SourceHut](https://sr.ht/~dgtalfairness/)
+
+- Public Repository Links:
+  - [GitHub](https://github.com/DGTALFairness/UFP)
+  - [GitLab](https://gitlab.com/DGTALFairness/UFP)
+  - [Bitbucket](https://bitbucket.org/dgtalfairness/ufp)
+  - [Codeberg](https://codeberg.org/DGTALFairness/UFP)
+  - [SourceHut](https://git.sr.ht/~dgtalfairness/UFP)
 
 ---
 
@@ -144,5 +153,12 @@ Because fairness isn't just a feature.
 It's the foundation.
 
 ---
+
+## 🌍 Live Demos
+
+- [Check-In Demo](https://checkin.universalfairnessprotocol.com)
+- [Lottery Demo](https://lottery.universalfairnessprotocol.com)
+- [Task Demo](https://task.universalfairnessprotocol.com)
+
 
 # 🚀 Trust Nothing. Verify Everything.

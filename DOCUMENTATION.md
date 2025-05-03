@@ -1,6 +1,6 @@
 # Universal Fairness Protocol (UFP) — System Documentation
 
-This documentation outlines the technical setup and requirements of the **Universal Fairness Protocol (UFP)** as discovered via the internal `info.php` script. This file is a developer-facing reference and should be included in the root of all distributed builds.
+This documentation outlines the technical setup and requirements of the **Universal Fairness Protocol (UFP)**. A developer-facing reference file is included in `/extras/info.zip`, which contains an offline `info.html` snapshot of a typical environment setup. This zipped file should be included with all distributed builds to assist developers in verifying hosting compatibility offline.
 
 ---
 
@@ -74,7 +74,7 @@ Fairness logs are public and segment chains are verifiable via `/verify_rounds.p
 ## 🧪 Testing the System
 
 Visit:
-- `/` — to interact with the system in real-time
+- `/index.php` — to interact with the system in real-time
 - `/verify_rounds.php` — to check fairness, rehashes, and winner proof
 
 
